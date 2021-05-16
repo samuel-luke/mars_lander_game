@@ -1,0 +1,42 @@
+body {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.screen {
+	display: none;
+}
+
+.screen.active {
+	display: block;
+}
+
+.card {
+    border: none !important;
+    background-color: #7a5945 !important;
+    border-radius: 0 !important;
+    height: 100vh;
+}
+
+#game-title {
+    color:#9b1e1e;
+    text-shadow: 2px 2px 2px black;
+    font-family: impact;
+    letter-spacing: 22px;
+    font-size: 60px;
+    height: 10vh;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    height: 90vh;
+    margin: auto;
+}
+
+.wrapper canvas {
+    position: absolute;
+    margin: auto;
+    max-height: 90vh;
+    bottom: 0;
+    left: 50vh;
+}

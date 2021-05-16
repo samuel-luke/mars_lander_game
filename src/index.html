@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Assn3: Lunar Lander</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- JavaScript -->
+    <script>
+		var Lander = {
+            model : {},
+			pages : {},
+            graphics : {},
+            input : {},
+		};
+	</script>
+    <script src="input.js"></script>
+
+    <script src="random.js"></script>
+    <script src="particle-system.js"></script>
+    <script src="particle-system-linear.js"></script>
+    <script src="graphics.js"></script>
+
+    <script src="screens.js"></script>
+    <script src="page-mainmenu.js"></script>
+    <script src="page-game.js"></script>
+    <script src="page-highscores.js"></script>
+    <script src="page-controls.js"></script>
+    <script src="page-credits.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+
+<body onload="Lander.screens.initialize();">
+    <div class="card text-center">  
+        <!-- Header -->
+        <h1 class="card-title" id="game-title">Red Rover</h1>
+
+        <!-- Game -->
+        <div id = "page-mainmenu" class = "screen">
+            <button type="button" class="btn btn-danger mb-3" id = "id-new-game">New Game</button><br/>
+            <button type="button" class="btn btn-danger mb-3" id = "id-high-scores">High Scores</button><br/>
+            <button type="button" class="btn btn-danger mb-3" id = "id-controls">Controls</button><br/>
+            <button type="button" class="btn btn-danger" id = "id-credits">Credits</button>
+        </div>
+
+        <div id = "page-game" class = "screen">
+            <div class="wrapper">
+                <canvas id="background-canvas" width="1000" height="1000"></canvas>
+                <canvas id="main-canvas" width="1000" height="1000"></canvas>
+            </div>
+        </div>
+
+        <div id = "page-highscores" class = "screen">
+            <h1>High Scores</h1>
+            <ol class="text-center" id = "high-scores-list" style="margin: auto;">
+                <li id="highscore1"></li>
+                <li id="highscore2"></li>
+                <li id="highscore3"></li>
+                <li id="highscore4"></li>
+                <li id="highscore5"></li>
+            </ol>
+            <button type="button" class="btn btn-danger mb-3" id = "id-high-scores-back">Back</button>
+        </div>
+
+        <div id = "page-controls" class = "screen">
+            <h1>Controls</h1>
+            <p>To change a key binding, click the intended function and then press the desired key on your keyboard</p>
+
+            <button type="button" class="btn btn-primary mb-3" id = "id-controls-rotateCW">Rotate Clockwise</button><br/>
+            <button type="button" class="btn btn-primary mb-3" id = "id-controls-rotateCCW">Rotate Counter Clockwise</button><br/>
+            <button type="button" class="btn btn-primary mb-3" id = "id-controls-thrust">Thrust</button><br/>
+
+            <button type="button" class="btn btn-danger mb-3" id = "id-controls-back">Back</button>
+        </div>
+
+        <div id = "page-credits" class = "screen">
+            <h1>Credits</h1>
+            <p>Game by Samuel Luke</p>
+            <button type="button" class="btn btn-danger mb-3" id = "id-credits-back">Back</button>
+        </div>
+    </div>
+</body>
+
+</html>
